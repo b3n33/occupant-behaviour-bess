@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor
+.vscode/
+
+# Data (keep small samples elsewhere)
+data/
+
+
+# Outputs and reports
+outputs/
+*.log
+
+# Vendor tools / external binaries
+EnergyPlusV22-1-0/
+
+# MATLAB
+*.asv
+
+
+# OS
+.DS_Store
+Thumbs.db
