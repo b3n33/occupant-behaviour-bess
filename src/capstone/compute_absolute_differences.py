@@ -14,7 +14,7 @@ OUTPUT_DIR = DATA_DIR
 
 METADATA_PATH = DATA_DIR / "metadata.csv"
 EPLUSOUT_PATH = DATA_DIR / "eplusout.csv"
-ELECTRICITY_PATH = DATA_DIR / "electricity_cleaned.csv"
+ELECTRICITY_PATH = DATA_DIR / "electricity_cleaned_small.csv"
 OUTPUT_FILE = DATA_DIR / "Absolute_Differences.csv"
 
 BUILDING_TITLES = [
