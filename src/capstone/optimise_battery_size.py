@@ -24,8 +24,8 @@ NUM_BUILDINGS = 6                                                       # number
 PRICE_CAPACITY = 90                                                     # £ per kWh of battery capacity
 YEARS = 10                                                              # simulation years for cost calculation
 
-PSO_PARTICLES = 30
-PSO_ITERS = 20
+PSO_PARTICLES = 3
+PSO_ITERS = 10
 PSO_OPTIONS = {"c1": 0.5, "c2": 0.3, "w": 0.9}                          # cognitive, social, inertia weights
 BOUNDS = (np.array([1.0]), np.array([162.0]))                           # kWh capacity range
 

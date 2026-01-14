@@ -64,8 +64,6 @@ def main() -> None:
 
     df_ep = df_ep / CONVERSION_FACTOR
 
-    print(df_load)
-
     plt.rcParams.update({"font.size": 9})
     fig, ax = plt.subplots(figsize=(7.5, 2.5))
 
