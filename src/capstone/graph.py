@@ -8,21 +8,19 @@ ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 
 EPLUSOUT_PATH = DATA_DIR / "eplusout.csv"
-ELECTRICITY_PATH = DATA_DIR / "electricity_cleaned.csv"
+ELECTRICITY_PATH = DATA_DIR / "electricity_cleaned_small.csv"
 
 # Row window for plotting (start index and number of rows)
 ROW_START = 1
-ROW_COUNT = 8000
+ROW_COUNT = 400
 ROW_RANGE = slice(ROW_START, ROW_START + ROW_COUNT)
 MODIFIED_ROW_RANGE = slice(ROW_RANGE.start + 1, ROW_RANGE.stop + 1)
 
 CONVERSION_FACTOR = 3600000 * 4982.19  # J to kWh per m^2
 
 PLOT_SERIES = [
-    ("Lamb_office_Peggy", 432, "red", "Office 1"),
-    ("Lamb_office_Corine", 501, "blue", "Office 2"),
-    ("Lamb_office_Callie", 689, "cyan", "Office 3"),
-    ("Lamb_office_William", 732, "green", "Office 4"),
+    ("Robin_office_Sammie", 4802, "Red", "High OEB"),
+    ("Eagle_office_Lillian", 4844.1, "Blue", "Low OEB"),
 ]
 
 SIM_COLUMN = "Electricity:Facility [J](Hourly)"
@@ -65,6 +63,8 @@ def main() -> None:
     )
 
     df_ep = df_ep / CONVERSION_FACTOR
+
+    print(df_load)
 
     plt.rcParams.update({"font.size": 9})
     fig, ax = plt.subplots(figsize=(7.5, 2.5))
