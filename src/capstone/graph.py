@@ -24,7 +24,6 @@ PLOT_SERIES = [
 ]
 
 SIM_COLUMN = "Electricity:Facility [J](Hourly)"
-SAVE_FIG = True
 FIG_PATH = ROOT / "docs" / "figures" / "dif.pdf"
 # --- End config ---
 
@@ -95,10 +94,8 @@ def main() -> None:
     ax.legend(fontsize=8)
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%d %b"))
     ax.grid(True)
-
-    if SAVE_FIG:
-        FIG_PATH.parent.mkdir(parents=True, exist_ok=True)
-        plt.savefig(FIG_PATH, bbox_inches="tight", dpi=300)
+    FIG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    plt.savefig(FIG_PATH, bbox_inches="tight", dpi=300)
 
     plt.show()
 

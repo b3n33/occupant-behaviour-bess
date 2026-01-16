@@ -29,8 +29,8 @@ PSO_ITERS = 10
 PSO_OPTIONS = {"c1": 0.5, "c2": 0.3, "w": 0.9}                          # cognitive, social, inertia weights
 BOUNDS = (np.array([1.0]), np.array([162.0]))                           # kWh capacity range
 
-PLOT_DECISION_SPACE = True
-SAVE_FIG = True
+PLOT_DECISION_SPACE = False
+SAVE_FIG = False
 # --- End config ---
 
 cost_cache = {}

@@ -17,8 +17,7 @@ CONFIDENCE_INTERVAL = 0.7;
 NUM_CLUSTERS = 5;          
 EXPONENT = 2;              
 RNG_SEED = 42;             
-WRITE_OUTPUT = true;
-PLOT_MF = true;
+PLOT_MF = false;
 % --- End config ---
 
 % Reproducibility
@@ -72,11 +71,8 @@ output_matrix_final = max(output_matrix, [], 1, 'omitnan')';
 output_matrix_final_reshaped = reshape(output_matrix_final, size(data_original));
 output_matrix_final_reshaped(isnan(output_matrix_final_reshaped)) = 0;
 result = sum(output_matrix_final_reshaped, 2);
-
-if WRITE_OUTPUT
-    writematrix(result, OUTPUT_FILE);
-    fprintf('Wrote: %s\n', OUTPUT_FILE);
-end
+writematrix(result, OUTPUT_FILE);
+fprintf('Wrote: %s\n', OUTPUT_FILE);
 
 % Optional plot of membership functions
 if PLOT_MF
