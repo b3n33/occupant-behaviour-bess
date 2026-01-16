@@ -32,9 +32,9 @@ Building energy demand models often focus on physical building characteristics w
 
 ## Installation 
 ### Docker (recommended)
-One-command setup (downloads the input data release and runs the pipeline):
 ```bash
-docker build -t oeb-bess . && docker run --rm oeb-bess
+docker build -t oeb-bess . 
+docker run --rm oeb-bess
 ```
 ### Local installation
 - Windows

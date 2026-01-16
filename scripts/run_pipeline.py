@@ -11,7 +11,6 @@ if str(SRC_DIR) not in sys.path:
 from capstone.compute_absolute_differences import main as run_diffs
 from capstone.graph import main as run_graph
 from capstone.optimise_battery_size import main as run_opt
-from scripts.download_data import main as download_data
 
 
 def run_matlab_clusters() -> None:
@@ -47,6 +46,7 @@ def main() -> None:
     args = parse_args()
 
     if args.download_data:
+        from scripts.download_data import main as download_data
         download_data()
 
     run_diffs()
