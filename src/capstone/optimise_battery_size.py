@@ -257,7 +257,7 @@ def main() -> None:
     )
 
     print(f"Optimal Battery Capacity: {pos} kWh")
-    print(f"Minimum Energy Cost: £{cost}")
+    print(f"Minimum Energy Cost ({YEARS}y energy + battery capex, {NUM_BUILDINGS} houses): £{cost}")
 
     if PLOT_DECISION_SPACE:
         plot_decision_space(optimiser)

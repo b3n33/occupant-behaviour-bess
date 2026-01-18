@@ -4,7 +4,7 @@ Quantifies occupants' energy behaviour (OEB) from simulated vs measured demand, 
 
 ## Overview
 
-Building energy demand models often focus on physical building characteristics while simplifying OEB. This project quantifies and clusters OEB into five distinct consumption profiles, which are used to improve energy demand predictions. The resulting OEB-adjusted forecasts are then incorporated into a Mixed-Integer Linear Programming (MILP) and Particle Swarm Optimisation (PSO) framework to optimise the capacity of a communal BESS.
+Building energy demand models often focus on physical building characteristics while simplifying OEB. This project quantifies and clusters OEB into five distinct consumption profiles, which are used to improve energy demand predictions. The resulting OEB-adjusted forecasts are then incorporated into a Mixed-Integer Linear Programming (MILP) and Particle Swarm Optimisation (PSO) framework to optimise the capacity of a communal BESS. See the final report in docs/ for full methodology, results, and discussion.
 
 ## Features
 - End-to-end pipeline with flags to download data and skip MATLAB (`run_pipeline.py`)
